@@ -11,8 +11,8 @@ most_common_url, count = url_count.most_common_url(1)[0]
 
 print (f"{most_common_url} ({count} occurances)")
 
-logfile1 = "http://public.karat.io/content/url2.txt"
-logfile2 = "http://public.karat.io/content/single_url2.txt"
+logfile1 = "url2.txt"
+logfile2 = "single_url2.txt"
 
 most_popular_url(logfile1)
 most_popular_url(logfile2)
