@@ -16,23 +16,33 @@ for url in urls:
 
 #print(url_count)
 
-# Print top N URLS
-max_url = ""
-max_count = 0
-
-for url in url_count:
-  if url_count[url] > max_count:
-    max_count = url_count[url]
-    max_url = url
-
-#print(max_url, "(", max_count, "occurrences)")
-
 sorted_urls = sorted(
     url_count.items(),
     key=operator.itemgetter(1),
     reverse=True
 )
 
+print('2nd Min Occurance:')
+print(sorted_urls[-2][0], "(", sorted_urls[-2][1], "occurrences)")
+
+print('-----------------------------------------------------------------')
+
+print('2nd Highest Occurance:')
+print(sorted_urls[1][0], "(", sorted_urls[1][1], "occurrences)")
+
+print('-----------------------------------------------------------------')
+
+print('12th Occurance:')
+print(sorted_urls[11][0], "(", sorted_urls[11][1], "occurrences)")
+
+print('-----------------------------------------------------------------')
+
+print('First 15 occurance:')
 N = 15
 for i in range(N):
   print(sorted_urls[i][0], "(", sorted_urls[i][1], "occurrences)")
+
+print('-----------------------------------------------------------------')
+
+#print('sorted urls:')
+#print(sorted_urls)
