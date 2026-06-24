@@ -18,7 +18,7 @@ N = 15
 
 # Print top N URLS
 for i in range(N):
-  max_url =
+  max_url = ""
   max count = 0
   
   for url in url_count:
