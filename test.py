@@ -4,7 +4,7 @@ file_url = "https://public.karat.io/content/urls2.txt"
 
 response = requests.get(file_url)
 
-urls response.text.splitlines()
+urls = response.text.splitlines()
 
 # Count URLS
 url_count = {}
