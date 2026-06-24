@@ -1,18 +1,32 @@
-from collections import Counter
-from urllib.request import urlopen
+import requests
 
-def most_popular_url(log_file_url):
-  with urlopen(log_file_url) as response:
-    lines = response.read().decode("utf-8").splitlines()
+file_url = "https://public.karat.io/content/urls2.txt"
 
-  url_count = Counter(lines)
+response = requests.get(file_url)
 
-  most_common_url, count = url_count.most_common_url(1)[0]
+urls response.text.splitlines()
 
-  print (f"{most_common_url} ({count} occurances)")
+# Count URLS
+url_count = {}
+for url in urls:
+  if url in url_count:
+    url_count[url] += 1
+  else:
+    url_count[url] = 1
+    
+N = 15
 
-logfile1 = "url2.txt"
-logfile2 = "single_url2.txt"
-
-most_popular_url(logfile1)
-most_popular_url(logfile2)
+# Print top N URLS
+for i in range(N):
+  max_url =
+  max count = 0
+  
+  for url in url_count:
+    if url_count[url] > max_count:
+      max_count url_count[url]
+      max_url = url
+      
+  print(max_url, "(", max_count, "occurrences)")
+  
+# Remove it so next highest can be found
+  del url_count [max_url]
