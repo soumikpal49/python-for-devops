@@ -23,7 +23,7 @@ for i in range(N):
   
   for url in url_count:
     if url_count[url] > max_count:
-      max_count url_count[url]
+      max_count = url_count[url]
       max_url = url
       
   print(max_url, "(", max_count, "occurrences)")
